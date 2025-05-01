@@ -25,11 +25,8 @@ namespace projekt
             {
                 return difficultynull;
             }
-
-
-
         }
-        static void wordle_game()
+        static string wordselect() 
         {
 
             string difficulty = null;
@@ -45,16 +42,20 @@ namespace projekt
             {
                 wordslist.Add(sr.ReadLine().ToLower());
             }
-            if (wordslist.Count == 0)
-            {
-                Console.WriteLine("The file was empty or the file is non existant");
-                return;
-            }
             Random rnd = new Random();
 
             int wordselector = rnd.Next(0, wordslist.Count);
 
             string word = wordslist[wordselector];
+            return word;
+
+        }
+        
+        
+        static void wordle_game()
+        {
+
+            string word = wordselect();
 
 
 
@@ -62,31 +63,8 @@ namespace projekt
         }
         static void hangman_game()
         {
-            string difficulty = null;
-            while (difficulty == null)
-            {
-                difficulty = difficultyselect();
-            }
 
-
-            StreamReader sr = new StreamReader($"{difficulty}h.txt");
-
-            List<string> wordslist = new List<string>();
-
-            while (!sr.EndOfStream)
-            {
-                wordslist.Add(sr.ReadLine().ToLower());
-            }
-            if (wordslist.Count == 0)
-            {
-                Console.WriteLine("The file was empty or the file is non existant");
-                return;
-            }
-            Random rnd = new Random();
-
-            int wordselector = rnd.Next(0, wordslist.Count);
-
-            string word = wordslist[wordselector];
+            string word = wordselect();
             List<char> guesslist = new List<char>();
 
             List<char> Guessword = new List<char>();
@@ -111,7 +89,7 @@ namespace projekt
                 catch (Exception)
                 {
 
-                    Console.WriteLine("Invalid Imput");
+                    Console.WriteLine("Invalid input");
                     continue;
                 }
                 if (!char.IsLetter(guess))
@@ -172,8 +150,8 @@ namespace projekt
         private const int maxmistakes = 6;
         static void Main(string[] args)
         {
-            bool o = true;
-            while (o)
+            bool IsRunning = true;
+            while (IsRunning)
             {
                 Console.WriteLine("Would you like to play the hangman game or  wordle?");
                 Console.WriteLine("Press 'h' for hangman and 'w' for wordle and 'x' to quit");
@@ -189,11 +167,11 @@ namespace projekt
                 }
                 else if (x == "x")
                 {
-                    o = false;
+                    IsRunning = false;
                 }
                 else
                 {
-                    Console.WriteLine("That is not a valid imput");
+                    Console.WriteLine("That is not a valid input");
                 }
             }
 

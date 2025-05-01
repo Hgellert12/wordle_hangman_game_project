@@ -12,3 +12,10 @@ C:\projekt\projekt\obj\Debug\projekt.csproj.AssemblyReference.cache
 C:\projekt\projekt\obj\Debug\projekt.csproj.CoreCompileInputs.cache
 C:\projekt\projekt\obj\Debug\projekt.exe
 C:\projekt\projekt\obj\Debug\projekt.pdb
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\bin\Debug\projekt.exe.config
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\bin\Debug\projekt.exe
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\bin\Debug\projekt.pdb
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\obj\Debug\projekt.csproj.AssemblyReference.cache
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\obj\Debug\projekt.csproj.CoreCompileInputs.cache
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\obj\Debug\projekt.exe
+C:\Users\hajdu\OneDrive\Dokumentumok\wordle_hangman_game_project_csharp\projekt\obj\Debug\projekt.pdb
