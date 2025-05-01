@@ -11,11 +11,65 @@ namespace projekt
 
     class Program
     {
+        static string difficultyselect()
+        {
+            string difficulty;
+            string difficultynull = null;
+            Console.WriteLine("Select difficulty \n easy \n medium \n hard");
+            difficulty = Console.ReadLine().ToString().ToLower();
+            if (difficulty == "easy" || difficulty == "medium" || difficulty == "hard")
+            {
+                return difficulty;
+            }
+            else
+            {
+                return difficultynull;
+            }
+
+
+
+        }
+        static void wordle_game()
+        {
+
+            string difficulty = null;
+            while (difficulty == null)
+            {
+                difficulty = difficultyselect();
+            }
+            StreamReader sr = new StreamReader($"{difficulty}w.txt");
+
+            List<string> wordslist = new List<string>();
+
+            while (!sr.EndOfStream)
+            {
+                wordslist.Add(sr.ReadLine().ToLower());
+            }
+            if (wordslist.Count == 0)
+            {
+                Console.WriteLine("The file was empty or the file is non existant");
+                return;
+            }
+            Random rnd = new Random();
+
+            int wordselector = rnd.Next(0, wordslist.Count);
+
+            string word = wordslist[wordselector];
+
+
+
+
+        }
         static void hangman_game()
         {
-            Console.WriteLine("What is the name of the file that contains the words?");
-            string filename = Console.ReadLine();
-            StreamReader sr = new StreamReader($"{filename}.txt");
+            string difficulty = null;
+            while (difficulty == null)
+            {
+                difficulty = difficultyselect();
+            }
+
+
+            StreamReader sr = new StreamReader($"{difficulty}h.txt");
 
             List<string> wordslist = new List<string>();
 
@@ -125,17 +179,17 @@ namespace projekt
                 Console.WriteLine("Press 'h' for hangman and 'w' for wordle and 'x' to quit");
                 string x;
                 x = Console.ReadLine().ToLower();
-                if (x=="h")
+                if (x == "h")
                 {
                     hangman_game();
                 }
-                else if (x=="w")
+                else if (x == "w")
                 {
-                    continue;
+                    wordle_game();
                 }
-                else if (x=="x")
+                else if (x == "x")
                 {
-                    break;
+                    o = false;
                 }
                 else
                 {

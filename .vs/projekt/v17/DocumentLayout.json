@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hajdu\\OneDrive\\Dokumentumok\\wordle_hangman_game_project_csharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B57F581C-958A-44AC-B8CC-B62DD003330A}|projekt\\projekt.csproj|c:\\users\\hajdu\\onedrive\\dokumentumok\\wordle_hangman_game_project_csharp\\projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57F581C-958A-44AC-B8CC-B62DD003330A}|projekt\\projekt.csproj|solutionrelative:projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hajdu\\OneDrive\\Dokumentumok\\wordle_hangman_game_project_csharp\\projekt\\Program.cs",
+              "RelativeDocumentMoniker": "projekt\\Program.cs",
+              "ToolTip": "C:\\Users\\hajdu\\OneDrive\\Dokumentumok\\wordle_hangman_game_project_csharp\\projekt\\Program.cs",
+              "RelativeToolTip": "projekt\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T10:17:23.905Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
