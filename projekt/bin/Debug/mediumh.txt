@@ -1,0 +1,10 @@
+pillow
+bottle
+window
+planet
+silver
+garden
+button
+monkey
+school
+pencil
