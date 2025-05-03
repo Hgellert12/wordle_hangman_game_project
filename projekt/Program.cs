@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Runtime.InteropServices; 
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +11,9 @@ namespace projekt
 
     class Program
     {
+        private const int maxmistakes = 6;
+        private const int wordlelength = 5;
+        
         static string difficultyselect()
         {
             string difficulty;
@@ -50,16 +53,80 @@ namespace projekt
             return word;
 
         }
-        
-        
+
+        static bool IsValidGuess(string guess)
+        {
+            return guess.Length == wordlelength && guess.All(char.IsLetter);
+        }
+
+
+
         static void wordle_game()
         {
 
             string word = wordselect();
-
-
-
-
+            
+            for (int i = 0; i < word.Length; i++)
+            {
+                Console.Write("_ ");
+                
+            }
+            Console.Write("\n");
+            Console.WriteLine(word);
+            string Guess;
+            int Guesscount = 0;
+            
+            while (maxmistakes>Guesscount)
+            {
+                Console.WriteLine($"You have {(6-Guesscount)} guesses left \n What is your next guess? ");
+                
+                Guess = Console.ReadLine().ToLower();
+                bool isguessword = IsValidGuess(Guess);
+                    if (isguessword == true)
+                    {
+                    
+                        string answer = null;
+                        for (int i = 0; i < Guess.Length; i++)
+                        {
+                            if (word.Contains(Guess[i]))
+                            {
+                                if (word[i] == Guess[i])
+                                {
+                                    answer += "!";
+                                }
+                                else
+                                {
+                                    answer += "?";
+                                }
+                            }
+                            else
+                            {
+                                answer += "X";
+                            }
+                        }
+                        Console.WriteLine(answer);
+                        if (answer == "!!!!!")
+                        {
+                            Console.WriteLine("Congratulations you have won!");
+                            return;
+                        }
+                        Guesscount++;
+                        if (Guesscount==maxmistakes)
+                        {
+                            Console.WriteLine("Im sorry you have lost!");
+                            return;
+                        }
+                    }
+                    
+                
+                else
+                {
+                    Console.WriteLine("Invalid input please try again!");
+                    continue;
+                }
+                
+                
+            }
         }
         static void hangman_game()
         {
@@ -147,7 +214,7 @@ namespace projekt
                 Console.WriteLine("The word was " + word);
             }
         }
-        private const int maxmistakes = 6;
+        
         static void Main(string[] args)
         {
             bool IsRunning = true;
